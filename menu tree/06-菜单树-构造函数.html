@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>菜单树-构造函数</title>
+</head>
+<body>
+<ul id="tree-container"></ul>
+<script src="tree.js"></script>
+<script>
+    var data = [{
+        name: 'hello',
+        children: [
+            { name: '哈哈' },
+            { name: '哈哈' },
+            {
+                name: '哈哈',
+                children: [
+                    { name: '嘿嘿' }
+                ]
+            },
+            { name: '哈哈' }
+        ]
+    },
+        { name: 'wat' },
+        {
+            name: 'child folder',
+            children: [{
+                name: 'child folder',
+                children: [
+                    { name: 'hello' },
+                    { name: 'wat' }
+                ]
+            },
+                { name: 'hello' },
+                { name: 'wat' },
+                {
+                    name: 'child folder',
+                    children: [
+                        { name: 'hello' },
+                        { name: 'wat' }
+                    ]
+                }
+            ]
+        }
+    ];
+    new Tree('tree-container',data);
+</script>
+</body>
+</html>
